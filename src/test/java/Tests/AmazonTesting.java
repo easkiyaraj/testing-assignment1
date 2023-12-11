@@ -5,7 +5,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import java.time.Duration;
 
 public class AmazonTesting {
@@ -21,6 +20,8 @@ public class AmazonTesting {
         search.fillSearchname("iphone");
         search.fillSearch();
         search.fillSuggestion();
+        driver.navigate().back();
+        search.fillOutofstock();
         Assert.assertEquals(driver.getCurrentUrl(),"https://www.amazon.in/Apple-iPhone-13-128GB-Starlight/dp/B09G9D8KRQ/ref=sr_1_1_sspa?crid=PUWSUMZ9C8SE&keywords=iphone&qid=1700980776&sprefix=%2Caps%2C289&sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY&psc=1",
                 "product missmatch");
     }

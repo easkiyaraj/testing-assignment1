@@ -13,6 +13,7 @@ public class Myntra {
     }
 
     public void fillMen(){
+       ldriver.findElement(MEN).isEnabled();
         ldriver.findElement(MEN).click();
     }
     public void fillMencollection(){

@@ -8,6 +8,7 @@ public class Amazon {
     private static final By SEARCHNAME = By.xpath("//input[@id='twotabsearchtextbox']");
     private static final By SEARCH = By.xpath("//input[@id='nav-search-submit-button']");
     private static final By SUGGESTION = By.xpath("//img[@alt='Apple iPhone 14 (128 GB) - Midnight']");
+    private static final By OUTOFSTOCK = By.xpath("//span[@class='a-size-base a-color-base a-text-bold']");
 
     public Amazon(WebDriver rdriver) {
         ldriver = rdriver;
@@ -20,5 +21,8 @@ public class Amazon {
     }
     public void fillSuggestion(){
         ldriver.findElement(SUGGESTION).click();
+    }
+    public void fillOutofstock(){
+        ldriver.findElement(OUTOFSTOCK).click();
     }
 }
